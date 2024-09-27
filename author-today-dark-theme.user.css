@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name       AT - Тёмный стиль
+@version    1.0
+@namespace  Sofitt
+@homepageURL  https://github.com/Sofitt/author-today-dark-theme
+@supportURL   https://github.com/Sofitt/author-today-dark-theme/issues/new/choose
+@updateURL    https://raw.githubusercontent.com/Sofitt/author-today/main/author-today-dark-theme.user.css
+==/UserStyle== */
+
+@-moz-document regexp("^https:\\/\\/author\\.today(?!\\/reader).*") {
+/* При желании можно добиться другого оттенка (дефолтный оранжевый) */
+html {
+  filter: invert(1) hue-rotate(30deg) saturate(5);
+}
+
+/* Эти стили отменяют действие фильтра наложенного на остальной html */
+img {
+  filter: invert(1) hue-rotate(340deg) saturate(.2) !important;
+}
+[style*="background-image"] {
+  filter: invert(1) hue-rotate(340deg) saturate(.2);
+}
+/* Баннер-слайдер на главной */
+.f-book-annotation {
+  background: #0000009E;
+  padding: 8px;
+}
+}
